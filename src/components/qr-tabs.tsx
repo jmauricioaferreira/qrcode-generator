@@ -116,7 +116,7 @@ export default function QRGeneratorPage() {
             </Tabs.Trigger>
           </Tabs.List>
 
-          <Tabs.Content value="url" className="min-h-44">
+          <Tabs.Content value="url" className=" min-h-20 sm:min-h-44">
             <input
               type="text"
               placeholder="Digite uma URL"
@@ -125,7 +125,7 @@ export default function QRGeneratorPage() {
             />
           </Tabs.Content>
 
-          <Tabs.Content value="wpp" className="min-h-44">
+          <Tabs.Content value="wpp" className=" min-h-20 sm:min-h-44">
             <input
               type="text"
               placeholder="Digite o número (ex: 5599999999999)"
@@ -134,7 +134,7 @@ export default function QRGeneratorPage() {
             />
           </Tabs.Content>
 
-          <Tabs.Content value="text" className="min-h-44">
+          <Tabs.Content value="text" className=" min-h-20 sm:min-h-44">
             <textarea
               placeholder="Digite o texto"
               className="w-full border border-textSecondary rounded-lg px-4 py-2 mb-4"
@@ -142,7 +142,7 @@ export default function QRGeneratorPage() {
             />
           </Tabs.Content>
 
-          <Tabs.Content value="wifi" className="min-h-44">
+          <Tabs.Content value="wifi" className=" min-h-20 sm:min-h-44">
             <input
               type="password"
               placeholder="Digite a senha do Wi-Fi"
@@ -150,48 +150,50 @@ export default function QRGeneratorPage() {
               onChange={(e) => setInput(e.target.value)}
             />
           </Tabs.Content>
-          <div className="flex lg:flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-2">
-              <span className="text-sm text-textSecondary">Tamanho:</span>
-              <SizeButton
-                size={110}
-                label="P"
-                currentSize={qrSize}
-                onClick={setQrSize}
-              />
-              <SizeButton
-                size={180}
-                label="M"
-                currentSize={qrSize}
-                onClick={setQrSize}
-              />
-              <SizeButton
-                size={250}
-                label="G"
-                currentSize={qrSize}
-                onClick={setQrSize}
-              />
-
-              <span className="text-sm text-textSecondary ml-4">Cor:</span>
-              <ColorButton
-                color="#1d1c52"
-                label="Primária"
-                currentColor={qrColor}
-                onClick={setQrColor}
-              />
-              <ColorButton
-                color="#28f064"
-                label="Acento"
-                currentColor={qrColor}
-                onClick={setQrColor}
-              />
-              <ColorButton
-                color="#3b82f6"
-                label="Texto"
-                currentColor={qrColor}
-                onClick={setQrColor}
-              />
-              {/* Removed invalid empty color button */}
+          <div className="flex flex-col items-center justify-between gap-4">
+            <div className="flex flex-col lg:flex-row items-start  gap-6 w-full">
+              <div className="flex items-start gap-2">
+                <span className="text-sm text-textSecondary">Tamanho:</span>
+                <SizeButton
+                  size={110}
+                  label="P"
+                  currentSize={qrSize}
+                  onClick={setQrSize}
+                />
+                <SizeButton
+                  size={180}
+                  label="M"
+                  currentSize={qrSize}
+                  onClick={setQrSize}
+                />
+                <SizeButton
+                  size={250}
+                  label="G"
+                  currentSize={qrSize}
+                  onClick={setQrSize}
+                />
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="text-sm text-textSecondary">Cor:</span>
+                <ColorButton
+                  color="#1d1c52"
+                  label="Primária"
+                  currentColor={qrColor}
+                  onClick={setQrColor}
+                />
+                <ColorButton
+                  color="#28f064"
+                  label="Acento"
+                  currentColor={qrColor}
+                  onClick={setQrColor}
+                />
+                <ColorButton
+                  color="#3b82f6"
+                  label="Texto"
+                  currentColor={qrColor}
+                  onClick={setQrColor}
+                />
+              </div>
             </div>
             <div className="flex w-full justify-end mt-6">
               <Button

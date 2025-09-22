@@ -6,8 +6,8 @@ export default function Home() {
   return (
     <>
       <div className="min-h-screen bg-background flex flex-col">
-        <div className="flex w-full h-16 sm:h-20 items-center justify-center header-background px-4">
-          <div className="flex flex-col sm:flex-row gap-2 sm:gap-8 items-center justify-center">
+        <div className="flex w-full h-fit items-center justify-center header-background p-4">
+          <div className="flex flex-col  sm:flex-row  sm:gap-8 items-center justify-center">
             <Logo />
             <h1 className="text-center text-lg sm:text-2xl lg:text-3xl font-bold text-white">
               QR Creator - Gerador de QR Code
