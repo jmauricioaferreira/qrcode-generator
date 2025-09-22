@@ -30,7 +30,7 @@ export default function Home() {
           </div>
         </main>
         <footer className="flex gap-[24px] flex-wrap items-center justify-center">
-          <Adsense adSlot="2960169125" />
+          <Adsense />
         </footer>
       </div>
     </>

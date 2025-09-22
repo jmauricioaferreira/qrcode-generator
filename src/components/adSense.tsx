@@ -4,19 +4,16 @@ import { useEffect } from "react";
 
 // Define a interface para as props do nosso componente.
 // Neste caso, ele espera apenas uma string chamada 'adSlot'.
-interface AdsenseProps {
-  adSlot: string;
-}
 
-const Adsense = ({ adSlot }: AdsenseProps) => {
+const Adsense = () => {
   useEffect(() => {
     // A tipagem 'any' é usada aqui para evitar erros de tipagem do TypeScript,
     // já que o objeto 'adsbygoogle' é injetado globalmente pelo script do Google
     // e não tem uma definição de tipo.
-    console.log("adsbygoogle", window.adsbygoogle);
     try {
-      (window as any).adsbygoogle = (window as any).adsbygoogle || [];
-      (window as any).adsbygoogle.push({});
+      ((window as unknown as { adsbygoogle: unknown[] }).adsbygoogle =
+        (window as unknown as { adsbygoogle: unknown[] }).adsbygoogle ||
+        []).push({});
     } catch (err) {
       console.error(err);
     }
