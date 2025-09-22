@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #f9fafb;
+  --color-secondary: #f2f5f8;
+  --color-text: #111827;
+  --color-text-secondary: #6b7280;
+  --color-primary: #1d1c52;
+  --color-primary-hover: #16153a;
+  --color-accent: #28f064;
+  --color-accent-hover: #19b846;
+  --header-start-color: #3b82f6; /* Um azul vibrante */
+  --header-end-color: #8b5cf6; /* Um roxo mais escuro e vibrante */
+}
+.header-background {
+  background: linear-gradient(
+    to right,
+    var(--header-start-color),
+    var(--header-end-color)
+  );
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+}
