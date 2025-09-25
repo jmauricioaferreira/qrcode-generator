@@ -8,15 +8,15 @@ declare global {
   }
 }
 
-interface AdSenseProps {
-  adSlot?: string;
-  adFormat?: string;
+interface AdSenseBannerProps {
+  adSlot: string;
+  adFormat?: "auto" | "rectangle" | "vertical" | "horizontal";
   adStyle?: React.CSSProperties;
   className?: string;
 }
 
-const AdSense: React.FC<AdSenseProps> = ({
-  adSlot = "2960169125",
+const AdSenseBanner: React.FC<AdSenseBannerProps> = ({
+  adSlot,
   adFormat = "auto",
   adStyle = { display: "block" },
   className = "",
@@ -33,15 +33,17 @@ const AdSense: React.FC<AdSenseProps> = ({
   }, []);
 
   return (
-    <ins
-      className={`adsbygoogle ${className}`}
-      style={adStyle}
-      data-ad-client="ca-pub-1113577441435329"
-      data-ad-slot={adSlot}
-      data-ad-format={adFormat}
-      data-full-width-responsive="true"
-    />
+    <div className={`ad-container ${className}`}>
+      <ins
+        className="adsbygoogle"
+        style={adStyle}
+        data-ad-client="ca-pub-1113577441435329"
+        data-ad-slot={adSlot}
+        data-ad-format={adFormat}
+        data-full-width-responsive="true"
+      />
+    </div>
   );
 };
 
-export default AdSense;
+export default AdSenseBanner;

@@ -1,6 +1,6 @@
 import QRGeneratorPage from "@/components/qr-tabs";
 import { Logo } from "@/components/images/logo";
-import Adsense from "@/components/adSense";
+import AdSense from "@/components/adSense";
 
 export default function Home() {
   const structuredData = {
@@ -80,7 +80,7 @@ export default function Home() {
           </section>
         </main>
         <footer className="flex gap-[24px] flex-wrap items-center justify-center min-h-[10rem] w-full">
-          <Adsense />
+          <AdSense />
         </footer>
       </div>
     </>
