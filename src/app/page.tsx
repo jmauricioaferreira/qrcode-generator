@@ -29,7 +29,7 @@ export default function Home() {
             <QRGeneratorPage />
           </div>
         </main>
-        <footer className="flex gap-[24px] flex-wrap items-center justify-center min-h-[20rem] w-full">
+        <footer className="flex gap-[24px] flex-wrap items-center justify-center min-h-[10rem] w-full">
           <Adsense />
         </footer>
       </div>
