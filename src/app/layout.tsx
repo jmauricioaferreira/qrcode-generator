@@ -90,10 +90,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${dm_sans.variable} antialiased`}>
-        <Analytics />
-        {children}
-      </body>
+      <head>
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1113577441435329"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+      </head>
+      <body className={`${dm_sans.variable} antialiased`}>{children}</body>
     </html>
   );
 }
