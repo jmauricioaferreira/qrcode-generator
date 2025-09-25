@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import Analytics from "@/components/analytics";
 import "./globals.css";
+import Script from "next/script";
 
 const dm_sans = DM_Sans({
   variable: "--font-montserrat",
@@ -89,13 +90,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <head>
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1113577441435329"
-          crossOrigin="anonymous"
-        />
-      </head>
       <body className={`${dm_sans.variable} antialiased`}>
         <Analytics />
         {children}

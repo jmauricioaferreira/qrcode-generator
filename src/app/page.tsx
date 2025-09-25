@@ -1,6 +1,8 @@
+"use client";
 import QRGeneratorPage from "@/components/qr-tabs";
 import { Logo } from "@/components/images/logo";
 import AdSense from "@/components/adSense";
+import AdSenseBanner from "@/components/adSenseBanner";
 
 export default function Home() {
   const structuredData = {
@@ -80,7 +82,14 @@ export default function Home() {
           </section>
         </main>
         <footer className="flex gap-[24px] flex-wrap items-center justify-center min-h-[10rem] w-full">
-          <AdSense />
+          <section className="w-full">
+            <h3 className="text-lg font-semibold mb-4">Anúncio Banner</h3>
+            <AdSenseBanner
+              adSlot="2960169125"
+              adFormat="auto"
+              className="w-full"
+            />
+          </section>
         </footer>
       </div>
     </>
