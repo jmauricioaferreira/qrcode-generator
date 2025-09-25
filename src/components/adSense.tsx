@@ -1,5 +1,4 @@
 "use client";
-import { useEffect } from "react";
 
 // Declaração global para o TypeScript
 declare global {
@@ -8,39 +7,24 @@ declare global {
   }
 }
 
-interface AdSenseProps {
-  adSlot?: string;
-  adFormat?: string;
-  adStyle?: React.CSSProperties;
-  className?: string;
-}
-
-const AdSense: React.FC<AdSenseProps> = ({
-  adSlot = "2960169125",
-  adFormat = "auto",
-  adStyle = { display: "block" },
-  className = "",
-}) => {
-  useEffect(() => {
-    try {
-      // Verifica se o script do AdSense foi carregado
-      if (typeof window !== "undefined" && window.adsbygoogle) {
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
-      }
-    } catch (err) {
-      console.error("Erro ao carregar anúncio AdSense:", err);
-    }
-  }, []);
-
+const AdSense = () => {
   return (
-    <ins
-      className={`adsbygoogle ${className}`}
-      style={adStyle}
-      data-ad-client="ca-pub-1113577441435329"
-      data-ad-slot={adSlot}
-      data-ad-format={adFormat}
-      data-full-width-responsive="true"
-    />
+    <>
+      {/* Código exato fornecido pelo Google AdSense */}
+      <ins
+        className="adsbygoogle"
+        style={{ display: "block" }}
+        data-ad-client="ca-pub-1113577441435329"
+        data-ad-slot="2960169125"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      />
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `(adsbygoogle = window.adsbygoogle || []).push({});`,
+        }}
+      />
+    </>
   );
 };
 

@@ -4,30 +4,31 @@
 
 ### 1. Script Principal (já implementado no layout.tsx)
 
-O script principal do AdSense está sendo carregado corretamente no `<head>` do `layout.tsx` usando `next/script`:
+O script principal do AdSense está sendo carregado diretamente no `<head>` usando o código exato fornecido pelo Google:
 
 ```tsx
 <head>
-  <Script
+  <script
+    async
     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1113577441435329"
-    strategy="beforeInteractive"
     crossOrigin="anonymous"
   />
 </head>
 ```
 
-#### Por que no `<head>`?
+#### Por que essa abordagem é melhor?
 
-- **Carregamento antecipado**: O script precisa estar disponível antes dos anúncios serem renderizados
-- **Estratégia `beforeInteractive`**: Garante que o script carregue antes da página ficar interativa
-- **Compatibilidade**: Segue as diretrizes oficiais do Google AdSense
-- **Performance**: Evita problemas de renderização dos anúncios
+- **Simplicidade**: Usa exatamente o código fornecido pelo Google
+- **Compatibilidade**: 100% compatível com as diretrizes oficiais
+- **Performance**: Carregamento assíncrono nativo
+- **Confiabilidade**: Menos dependências e complexidade
 
 ### 2. Componente AdSense (src/components/adSense.tsx)
 
-Criado um componente reutilizável que implementa corretamente o código fornecido pelo Google:
+Implementação usando exatamente o código fornecido pelo Google:
 
 ```tsx
+// Código exato do Google AdSense
 <ins
   className="adsbygoogle"
   style={{ display: "block" }}
@@ -36,6 +37,11 @@ Criado um componente reutilizável que implementa corretamente o código forneci
   data-ad-format="auto"
   data-full-width-responsive="true"
 />
+
+// Script de inicialização (deve estar no HTML, não no useEffect)
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 ```
 
 ### 3. Como Usar os Componentes
