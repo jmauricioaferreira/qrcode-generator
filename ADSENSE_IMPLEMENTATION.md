@@ -4,15 +4,24 @@
 
 ### 1. Script Principal (já implementado no layout.tsx)
 
-O script principal do AdSense já está sendo carregado corretamente no `layout.tsx` usando `next/script`:
+O script principal do AdSense está sendo carregado corretamente no `<head>` do `layout.tsx` usando `next/script`:
 
 ```tsx
-<Script
-  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1113577441435329"
-  strategy="afterInteractive"
-  crossOrigin="anonymous"
-/>
+<head>
+  <Script
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1113577441435329"
+    strategy="beforeInteractive"
+    crossOrigin="anonymous"
+  />
+</head>
 ```
+
+#### Por que no `<head>`?
+
+- **Carregamento antecipado**: O script precisa estar disponível antes dos anúncios serem renderizados
+- **Estratégia `beforeInteractive`**: Garante que o script carregue antes da página ficar interativa
+- **Compatibilidade**: Segue as diretrizes oficiais do Google AdSense
+- **Performance**: Evita problemas de renderização dos anúncios
 
 ### 2. Componente AdSense (src/components/adSense.tsx)
 
@@ -89,6 +98,7 @@ export default function MinhaPagina() {
 
 #### Estratégia de Carregamento
 
+- **`beforeInteractive`**: Script carrega antes da página ficar interativa (recomendado para AdSense)
 - **`afterInteractive`**: Script carrega após a página estar interativa
 - **`lazyOnload`**: Para anúncios que não são críticos
 
