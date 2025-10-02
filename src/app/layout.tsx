@@ -88,6 +88,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  console.log("Layout renderizado");
   return (
     <html lang="pt-BR">
       <head>

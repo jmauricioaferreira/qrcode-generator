@@ -1,15 +1,8 @@
 "use client";
-// components/Adsense.tsx
 import { useEffect } from "react";
-
-// Define a interface para as props do nosso componente.
-// Neste caso, ele espera apenas uma string chamada 'adSlot'.
 
 const Adsense = () => {
   useEffect(() => {
-    // A tipagem 'any' é usada aqui para evitar erros de tipagem do TypeScript,
-    // já que o objeto 'adsbygoogle' é injetado globalmente pelo script do Google
-    // e não tem uma definição de tipo.
     try {
       ((window as unknown as { adsbygoogle: unknown[] }).adsbygoogle =
         (window as unknown as { adsbygoogle: unknown[] }).adsbygoogle ||

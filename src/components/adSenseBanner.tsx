@@ -21,13 +21,10 @@ const AdSenseBanner: React.FC<AdSenseBannerProps> = ({
   adStyle = { display: "block" },
   className = "",
 }) => {
-  console.log("🚀 ~ AdSenseBanner ~ adSlot:", adSlot);
   useEffect(() => {
     try {
-      // Verifica se o script do AdSense foi carregado
       if (typeof window !== "undefined" && window.adsbygoogle) {
         (window.adsbygoogle = window.adsbygoogle || []).push({});
-        console.log("🚀 ~ AdSenseBanner ~ window:", window);
       }
     } catch (err) {
       console.error("Erro ao carregar anúncio AdSense:", err);

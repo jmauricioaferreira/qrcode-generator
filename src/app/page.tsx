@@ -1,6 +1,5 @@
 import QRGeneratorPage from "@/components/qr-tabs";
 import { Logo } from "@/components/images/logo";
-import AdSense from "@/components/adSense";
 import AdSenseBanner from "@/components/adSenseBanner";
 
 export default function Home() {
@@ -82,7 +81,6 @@ export default function Home() {
         </main>
         <footer className="flex gap-[24px] flex-wrap items-center justify-center min-h-[10rem] w-full">
           <section className="w-full">
-            ={" "}
             <AdSenseBanner
               adSlot="2960169125"
               adFormat="auto"
