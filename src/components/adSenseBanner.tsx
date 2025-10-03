@@ -1,5 +1,5 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 // Declaração global para o TypeScript
 declare global {
@@ -21,7 +21,15 @@ const AdSenseBanner: React.FC<AdSenseBannerProps> = ({
   adStyle = { display: "block" },
   className = "",
 }) => {
+  const [isClient, setIsClient] = useState(false);
+
   useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isClient) return;
+
     try {
       if (typeof window !== "undefined" && window.adsbygoogle) {
         (window.adsbygoogle = window.adsbygoogle || []).push({});
@@ -29,7 +37,30 @@ const AdSenseBanner: React.FC<AdSenseBannerProps> = ({
     } catch (err) {
       console.error("Erro ao carregar anúncio AdSense:", err);
     }
-  }, []);
+  }, [isClient]);
+
+  // Don't render the ad on the server to prevent hydration mismatch
+  if (!isClient) {
+    return (
+      <div
+        className={`ad-container ${className}`}
+        style={{ minHeight: "250px" }}
+      >
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            height: "100%",
+            color: "#666",
+            fontSize: "14px",
+          }}
+        >
+          Carregando anúncio...
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className={`ad-container ${className}`}>
