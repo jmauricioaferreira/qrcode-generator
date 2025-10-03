@@ -3,41 +3,8 @@ import { Logo } from "@/components/images/logo";
 import AdSenseBanner from "@/components/adSenseBanner";
 
 export default function Home() {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    name: "QR Creator - Gerador de QR Code",
-    description:
-      "Crie QR Codes personalizados gratuitamente! Gerador de QR Code para URL, WhatsApp, Wi-Fi e texto. Interface simples, download em PNG, cores e tamanhos personalizáveis.",
-    url: "https://qrcode-generator.vercel.app",
-    applicationCategory: "UtilityApplication",
-    operatingSystem: "Web Browser",
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "BRL",
-    },
-    creator: {
-      "@type": "Organization",
-      name: "QR Creator",
-    },
-    featureList: [
-      "Gerador de QR Code para URL",
-      "QR Code para WhatsApp",
-      "QR Code para Wi-Fi",
-      "QR Code para texto",
-      "Personalização de cores",
-      "Diferentes tamanhos",
-      "Download em PNG",
-    ],
-  };
-
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
       <div className="min-h-screen bg-background flex flex-col">
         <header className="flex w-full h-fit items-center justify-center header-background p-4">
           <div className="flex flex-col sm:flex-row sm:gap-8 items-center justify-center">
