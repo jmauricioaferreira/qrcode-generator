@@ -1,6 +1,6 @@
 import QRGeneratorPage from "@/components/qr-tabs";
 import { Logo } from "@/components/images/logo";
-import AdSenseBanner from "@/components/adSenseBanner";
+import HighPerformanceAd from "@/components/highPerformanceAd";
 import Navigation from "@/components/navigation";
 
 export default function Home() {
@@ -49,14 +49,17 @@ export default function Home() {
           </section>
         </main>
 
-        {/* AdSense Banner - Posicionado melhor no layout */}
+        {/* High Performance Format Ad - Posicionado melhor no layout */}
         <section className="w-full bg-gray-50 py-8">
           <div className="container mx-auto px-4">
-            <AdSenseBanner
-              adSlot="2960169125"
-              adFormat="auto"
-              className="w-full"
-            />
+            <HighPerformanceAd />
+          </div>
+        </section>
+
+        {/* Segundo anúncio - Entre conteúdo */}
+        <section className="w-full bg-white py-8">
+          <div className="container mx-auto px-4">
+            <HighPerformanceAd />
           </div>
         </section>
 
