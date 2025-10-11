@@ -12,7 +12,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row sm:gap-8 items-center justify-center">
             <Logo />
             <h1 className="text-center text-lg sm:text-2xl lg:text-3xl font-bold text-white">
-              QR Creator - Gerador de QR Code
+              QR Creator - Gerador da Meu QR Code
             </h1>
           </div>
         </header>
