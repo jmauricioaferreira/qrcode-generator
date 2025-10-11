@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Navigation from "@/components/navigation";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Como Usar o QR Creator - Tutorial Completo",
@@ -169,12 +170,12 @@ export default function ComoUsar() {
                 <div className="bg-white p-6 rounded-lg shadow-sm">
                   <ol className="list-decimal list-inside text-textSecondary space-y-3">
                     <li>
-                      Clique no botão <strong>"Gerar QR Code"</strong>
+                      Clique no botão <strong>&quot;Gerar QR Code&quot;</strong>
                     </li>
                     <li>Visualize o QR Code gerado na área de preview</li>
                     <li>
-                      Clique em <strong>"Baixar PNG"</strong> para salvar em seu
-                      dispositivo
+                      Clique em <strong>&quot;Baixar PNG&quot;</strong> para
+                      salvar em seu dispositivo
                     </li>
                     <li>O arquivo será salvo automaticamente com nome único</li>
                   </ol>
@@ -253,12 +254,12 @@ export default function ComoUsar() {
                   Agora que você sabe como usar, crie seu primeiro QR Code
                   personalizado!
                 </p>
-                <a
+                <Link
                   href="/"
                   className="inline-block bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
                 >
                   Criar QR Code Agora
-                </a>
+                </Link>
               </section>
             </div>
           </div>

@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Navigation from "@/components/navigation";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Sobre o QR Creator - Gerador de QR Code Gratuito",
@@ -169,12 +170,12 @@ export default function Sobre() {
                   Não perca tempo! Crie seu primeiro QR Code personalizado em
                   segundos.
                 </p>
-                <a
+                <Link
                   href="/"
                   className="inline-block bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
                 >
                   Criar QR Code Agora
-                </a>
+                </Link>
               </section>
             </div>
           </div>

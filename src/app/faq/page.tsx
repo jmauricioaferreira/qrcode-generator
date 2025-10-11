@@ -136,7 +136,7 @@ export default function FAQ() {
                       O QR Code para WhatsApp contém um link especial que,
                       quando escaneado, abre automaticamente o WhatsApp com o
                       número pré-preenchido. O usuário só precisa clicar em
-                      "Enviar" para iniciar a conversa.
+                      &quot;Enviar&quot; para iniciar a conversa.
                     </p>
                   </div>
 
@@ -189,8 +189,8 @@ export default function FAQ() {
                     </h3>
                     <p className="text-textSecondary">
                       Verifique se você preencheu o campo de conteúdo e clicou
-                      em "Gerar QR Code". Se o problema persistir, tente
-                      atualizar a página ou usar um navegador diferente.
+                      em &quot;Gerar QR Code&quot;. Se o problema persistir,
+                      tente atualizar a página ou usar um navegador diferente.
                       Certifique-se de que o JavaScript está habilitado.
                     </p>
                   </div>
@@ -282,8 +282,8 @@ export default function FAQ() {
                 </h2>
                 <p className="text-textSecondary mb-6">
                   Se não encontrou a resposta que procurava, entre em contato
-                  conosco ou consulte nossa página "Como Usar" para mais
-                  detalhes.
+                  conosco ou consulte nossa página &quot;Como Usar&quot; para
+                  mais detalhes.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
