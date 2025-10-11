@@ -235,9 +235,9 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 **Seu Nome**
 
-- GitHub: [@seu-usuario](https://github.com/seu-usuario)
-- LinkedIn: [Seu LinkedIn](https://linkedin.com/in/seu-perfil)
-- Portfolio: [Seu Portfolio](https://seu-portfolio.com)
+- GitHub: [@seu-usuario](https://github.com/jmauricioaferreira)
+- LinkedIn: [Seu LinkedIn](https://www.linkedin.com/in/jmauricioaferreira)
+- Portfolio: [Seu Portfolio](https://www.jmauricioaf.com/en#hello)
 
 ---
 
