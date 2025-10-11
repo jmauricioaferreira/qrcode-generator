@@ -18,7 +18,7 @@ export default function ProfitableDisplayAd(): JSX.Element {
       const conf = document.createElement("script");
       const script = document.createElement("script");
       script.type = "text/javascript";
-      script.src = `//www.profitabledisplaynetwork.com/${atOptions.key}/invoke.js`;
+      script.src = `//www.highperformanceformat.com/fa9730f7de22053acc5e430b64a5ba84/invoke.js`;
       conf.innerHTML = `atOptions = ${JSON.stringify(atOptions)}`;
 
       script.onload = () => {
