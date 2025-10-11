@@ -82,8 +82,8 @@ export default function RootLayout({
         />
         <Script
           id="hpf-script"
+          type="text/javascript"
           src="//www.highperformanceformat.com/fa9730f7de22053acc5e430b64a5ba84/invoke.js"
-          strategy="afterInteractive"
         />
       </head>
       <body className={`${dm_sans.variable} antialiased`}>{children}</body>
