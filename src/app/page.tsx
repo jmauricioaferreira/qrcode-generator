@@ -1,10 +1,12 @@
 import QRGeneratorPage from "@/components/qr-tabs";
 import { Logo } from "@/components/images/logo";
 import AdSenseBanner from "@/components/adSenseBanner";
+import Navigation from "@/components/navigation";
 
 export default function Home() {
   return (
     <>
+      <Navigation />
       <div className="min-h-screen bg-background flex flex-col">
         <header className="flex w-full h-fit items-center justify-center header-background p-4">
           <div className="flex flex-col sm:flex-row sm:gap-8 items-center justify-center">
@@ -46,14 +48,137 @@ export default function Home() {
             <QRGeneratorPage />
           </section>
         </main>
-        <footer className="flex gap-[24px] flex-wrap items-center justify-center min-h-[10rem] w-full">
-          <section className="w-full">
+
+        {/* AdSense Banner - Posicionado melhor no layout */}
+        <section className="w-full bg-gray-50 py-8">
+          <div className="container mx-auto px-4">
             <AdSenseBanner
               adSlot="2960169125"
               adFormat="auto"
               className="w-full"
             />
-          </section>
+          </div>
+        </section>
+
+        {/* Seção de conteúdo adicional para SEO */}
+        <section className="bg-white py-12">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold text-primary text-center mb-8">
+                Por que Escolher o QR Creator?
+              </h2>
+              <div className="grid md:grid-cols-3 gap-8">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white text-2xl">⚡</span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-primary mb-3">
+                    Rápido e Fácil
+                  </h3>
+                  <p className="text-textSecondary">
+                    Crie QR Codes em segundos com nossa interface intuitiva. Sem
+                    complicações, sem cadastro necessário.
+                  </p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white text-2xl">🎨</span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-primary mb-3">
+                    Personalização Total
+                  </h3>
+                  <p className="text-textSecondary">
+                    Escolha cores, tamanhos e formatos. Torne seus QR Codes
+                    únicos e alinhados com sua marca.
+                  </p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white text-2xl">🔒</span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-primary mb-3">
+                    100% Seguro
+                  </h3>
+                  <p className="text-textSecondary">
+                    Seus dados são processados localmente. Não armazenamos
+                    informações pessoais ou QR Codes gerados.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Seção de casos de uso */}
+        <section className="bg-background py-12">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold text-primary text-center mb-8">
+                Casos de Uso Populares
+              </h2>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="bg-white p-6 rounded-lg shadow-sm">
+                  <h3 className="text-lg font-semibold text-primary mb-3">
+                    🏢 Para Empresas
+                  </h3>
+                  <ul className="text-textSecondary space-y-2">
+                    <li>• Menus digitais em restaurantes</li>
+                    <li>• Links para redes sociais</li>
+                    <li>• Compartilhamento de Wi-Fi</li>
+                    <li>• Contatos e informações</li>
+                    <li>• Promoções e ofertas</li>
+                  </ul>
+                </div>
+                <div className="bg-white p-6 rounded-lg shadow-sm">
+                  <h3 className="text-lg font-semibold text-primary mb-3">
+                    👤 Para Pessoas
+                  </h3>
+                  <ul className="text-textSecondary space-y-2">
+                    <li>• Compartilhamento de contatos</li>
+                    <li>• Links para redes sociais</li>
+                    <li>• Informações de contato</li>
+                    <li>• Textos e mensagens</li>
+                    <li>• Eventos e convites</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <footer className="bg-gray-800 text-white py-8">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h3 className="text-xl font-semibold mb-4">QR Creator</h3>
+              <p className="text-gray-300 mb-4">
+                A ferramenta mais completa para criar QR Codes personalizados
+                gratuitamente.
+              </p>
+              <div className="flex justify-center space-x-6 text-sm">
+                <a
+                  href="/sobre"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  Sobre
+                </a>
+                <a
+                  href="/como-usar"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  Como Usar
+                </a>
+                <a
+                  href="/faq"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  FAQ
+                </a>
+              </div>
+              <p className="text-gray-400 text-sm mt-4">
+                © 2024 QR Creator. Todos os direitos reservados.
+              </p>
+            </div>
+          </div>
         </footer>
       </div>
     </>
