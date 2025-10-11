@@ -50,7 +50,7 @@ export default function Home() {
         </main>
 
         {/* High Performance Format Ad - Posicionado melhor no layout */}
-        <section className="w-full bg-gray-50 py-8 flex justify-between gap-4">
+        <section className="w-full bg-gray-50 py-8 flex flex-col lg:flex-row justify-between gap-4">
           <div className="container flex items-center justify-center px-4">
             <HighPerformanceAd />
           </div>
