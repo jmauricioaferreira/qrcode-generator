@@ -50,15 +50,14 @@ export default function Home() {
         </main>
 
         {/* High Performance Format Ad - Posicionado melhor no layout */}
-        <section className="w-full bg-gray-50 py-8">
-          <div className="container mx-auto px-4">
+        <section className="w-full bg-gray-50 py-8 flex justify-between gap-4">
+          <div className="container flex items-center justify-center px-4">
             <HighPerformanceAd />
           </div>
-        </section>
-
-        {/* Segundo anúncio - Entre conteúdo */}
-        <section className="w-full bg-white py-8">
-          <div className="container mx-auto px-4">
+          <div className="container flex items-center justify-center px-4">
+            <HighPerformanceAd />
+          </div>
+          <div className="container flex items-center justify-center px-4">
             <HighPerformanceAd />
           </div>
         </section>

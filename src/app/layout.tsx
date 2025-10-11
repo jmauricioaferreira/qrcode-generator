@@ -63,29 +63,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <head>
-        {/* High Performance Format Script */}
-        <Script
-          id="hpf-config"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.atOptions = {
-                'key': 'fa9730f7de22053acc5e430b64a5ba84',
-                'format': 'iframe',
-                'height': 250,
-                'width': 300,
-                'params': {}
-              };
-            `,
-          }}
-        />
-        <Script
-          id="hpf-script"
-          type="text/javascript"
-          src="//www.highperformanceformat.com/fa9730f7de22053acc5e430b64a5ba84/invoke.js"
-        />
-      </head>
       <body className={`${dm_sans.variable} antialiased`}>{children}</body>
     </html>
   );
