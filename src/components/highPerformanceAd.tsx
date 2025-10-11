@@ -21,7 +21,7 @@ export default function HighPerformanceAd() {
     >
       <Script
         id="adsterra-script"
-        src="https://www.highperformanceformat.com/fa9730f7de22053acc5e430b64a5ba84/invoke.js"
+        src="//www.highperformanceformat.com/fa9730f7de22053acc5e430b64a5ba84/invoke.js"
         strategy="afterInteractive" // Carrega o script após a página se tornar interativa
         onError={(e) => {
           console.error("Script da Adsterra falhou ao carregar", e);

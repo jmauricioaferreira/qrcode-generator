@@ -2,6 +2,7 @@ import QRGeneratorPage from "@/components/qr-tabs";
 import { Logo } from "@/components/images/logo";
 import HighPerformanceAd from "@/components/highPerformanceAd";
 import Navigation from "@/components/navigation";
+import AdSenseBanner from "@/components/adSenseBanner";
 
 export default function Home() {
   return (
@@ -58,7 +59,11 @@ export default function Home() {
             <HighPerformanceAd />
           </div>
           <div className="container flex items-center justify-center px-4">
-            <HighPerformanceAd />
+            <AdSenseBanner
+              adSlot="2960169125"
+              adFormat="auto"
+              className="my-4"
+            />
           </div>
         </section>
 
