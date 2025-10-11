@@ -1,35 +1,27 @@
+// src/components/highPerformanceAd.tsx
 "use client";
-import { useEffect, useState } from "react";
-
-// Declaração global para o TypeScript
-declare global {
-  interface Window {
-    atOptions?: {
-      key: string;
-      format: string;
-      height: number;
-      width: number;
-      params: Record<string, unknown>;
-    };
-  }
-}
+import { useEffect } from "react";
 
 export default function HighPerformanceAd() {
-  const [isLoaded, setIsLoaded] = useState(false);
-
   useEffect(() => {
-    // Verifica se o script já foi carregado
-    if (typeof window !== "undefined" && window.atOptions) {
-      setIsLoaded(true);
-      return;
-    }
+    // Carrega o script diretamente
+    const script = document.createElement("script");
+    script.innerHTML = `
+      atOptions = {
+        'key': 'fa9730f7de22053acc5e430b64a5ba84',
+        'format': 'iframe',
+        'height': 250,
+        'width': 300,
+        'params': {}
+      };
+    `;
+    document.head.appendChild(script);
 
-    // Se não estiver carregado, aguarda um pouco e tenta novamente
-    const timer = setTimeout(() => {
-      setIsLoaded(true);
-    }, 1000);
-
-    return () => clearTimeout(timer);
+    const script2 = document.createElement("script");
+    script2.src =
+      "//www.highperformanceformat.com/fa9730f7de22053acc5e430b64a5ba84/invoke.js";
+    script2.async = true;
+    document.head.appendChild(script2);
   }, []);
 
   return (
@@ -39,11 +31,7 @@ export default function HighPerformanceAd() {
         className="w-full max-w-[300px] h-[250px] flex items-center justify-center bg-gray-100 rounded-lg border border-gray-200"
         style={{ minHeight: "250px" }}
       >
-        {!isLoaded ? (
-          <div className="text-gray-500 text-sm">Carregando anúncio...</div>
-        ) : (
-          <div className="text-gray-400 text-xs">Anúncio carregado</div>
-        )}
+        <div className="text-gray-500 text-sm">Carregando anúncio...</div>
       </div>
     </div>
   );
