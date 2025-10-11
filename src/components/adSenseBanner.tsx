@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { adConfig } from "@/config/ads";
 
 // Declaração global para o TypeScript
 declare global {
@@ -9,15 +10,19 @@ declare global {
 }
 
 interface AdSenseBannerProps {
-  adSlot: string;
+  adSlot?: string;
   adFormat?: "auto" | "rectangle" | "vertical" | "horizontal";
   adStyle?: React.CSSProperties;
   className?: string;
 }
 
 const AdSenseBanner: React.FC<AdSenseBannerProps> = ({
-  adSlot,
-  adFormat = "auto",
+  adSlot = adConfig.slot,
+  adFormat = adConfig.format as
+    | "auto"
+    | "rectangle"
+    | "vertical"
+    | "horizontal",
   adStyle = { display: "block" },
   className = "",
 }) => {
@@ -39,7 +44,6 @@ const AdSenseBanner: React.FC<AdSenseBannerProps> = ({
     }
   }, [isClient]);
 
-  // Don't render the ad on the server to prevent hydration mismatch
   if (!isClient) {
     return (
       <div
@@ -67,7 +71,7 @@ const AdSenseBanner: React.FC<AdSenseBannerProps> = ({
       <ins
         className="adsbygoogle"
         style={adStyle}
-        data-ad-client="ca-pub-1113577441435329"
+        data-ad-client={adConfig.client}
         data-ad-slot={adSlot}
         data-ad-format={adFormat}
         data-full-width-responsive="true"

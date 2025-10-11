@@ -2,19 +2,7 @@ import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 import { Metadata } from "next";
-
-// Declaração global para o TypeScript
-declare global {
-  interface Window {
-    atOptions?: {
-      key: string;
-      format: string;
-      height: number;
-      width: number;
-      params: Record<string, unknown>;
-    };
-  }
-}
+import { adConfig } from "@/config/ads";
 
 const dm_sans = DM_Sans({
   variable: "--font-montserrat",
@@ -49,7 +37,7 @@ export const metadata: Metadata = {
     description: "Crie QR Codes personalizados gratuitamente!",
   },
   verification: {
-    google: "seu-codigo-verificacao-google",
+    google: adConfig.googleVerification,
   },
   alternates: {
     canonical: "https://qrcode-creator.vercel.app",
@@ -66,29 +54,8 @@ export default function RootLayout({
       <head>
         <Script
           async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1113577441435329"
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adConfig.client}`}
           crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
-        {/* High Performance Format Script */}
-        <Script
-          id="hpf-config"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.atOptions = {
-                'key': 'fa9730f7de22053acc5e430b64a5ba84',
-                'format': 'iframe',
-                'height': 250,
-                'width': 300,
-                'params': {}
-              };
-            `,
-          }}
-        />
-        <Script
-          id="hpf-script"
-          src="//www.highperformanceformat.com/fa9730f7de22053acc5e430b64a5ba84/invoke.js"
           strategy="afterInteractive"
         />
       </head>
