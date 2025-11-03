@@ -36,9 +36,7 @@ const AdSenseBanner: React.FC<AdSenseBannerProps> = ({
     if (!isClient) return;
 
     try {
-      if (typeof window !== "undefined" && window.adsbygoogle) {
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
-      }
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
     } catch (err) {
       console.error("Erro ao carregar anúncio AdSense:", err);
     }

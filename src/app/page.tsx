@@ -51,7 +51,7 @@ export default function Home() {
 
         {/* Google AdSense Banner - Posicionado melhor no layout */}
         <section className="w-full bg-gray-50 py-8 flex flex-col lg:flex-row justify-between gap-4">
-          <div className="container flex items-center justify-center px-4">
+          <div className="container w-full flex items-center justify-center px-4">
             <AdSenseBanner className="w-full" />
           </div>
         </section>

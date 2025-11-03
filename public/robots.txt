@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://meuqrcode.online
+
+# Sitemaps
+Sitemap: https://meuqrcode.online/sitemap.xml

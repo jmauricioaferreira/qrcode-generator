@@ -31,14 +31,6 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     type: "website",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "QR Creator - Gerador de QR Code Gratuito",
-    description: "Crie QR Codes personalizados gratuitamente!",
-  },
-  verification: {
-    google: adConfig.googleVerification,
-  },
   alternates: {
     canonical: "https://qrcode-creator.vercel.app",
   },
