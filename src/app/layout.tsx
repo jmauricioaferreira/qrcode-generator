@@ -3,6 +3,7 @@ import "./globals.css";
 import Script from "next/script";
 import { Metadata } from "next";
 import { adConfig } from "@/config/ads";
+import { Analytics } from "@vercel/analytics/next";
 
 const dm_sans = DM_Sans({
   variable: "--font-montserrat",
@@ -51,7 +52,10 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
       </head>
-      <body className={`${dm_sans.variable} antialiased`}>{children}</body>
+      <body className={`${dm_sans.variable} antialiased`}>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
