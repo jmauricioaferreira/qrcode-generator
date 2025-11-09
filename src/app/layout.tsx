@@ -50,11 +50,12 @@ export default function RootLayout({
           crossOrigin="anonymous"
           strategy="afterInteractive"
         />
-        <Script
+        <script
+          src="https://fpyf8.com/88/tag.min.js"
+          data-zone="184170"
           async
           data-cfasync="false"
-          src="https://propellerads.com/srv.js?zoneid=XXXXXX"
-        />
+        ></script>
       </head>
       <body className={`${dm_sans.variable} antialiased`}>{children}</body>
     </html>
