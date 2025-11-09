@@ -50,6 +50,11 @@ export default function RootLayout({
           crossOrigin="anonymous"
           strategy="afterInteractive"
         />
+        <Script
+          async
+          data-cfasync="false"
+          src="https://propellerads.com/srv.js?zoneid=XXXXXX"
+        />
       </head>
       <body className={`${dm_sans.variable} antialiased`}>{children}</body>
     </html>
