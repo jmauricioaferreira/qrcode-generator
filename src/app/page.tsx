@@ -1,7 +1,7 @@
 import QRGeneratorPage from "@/components/qr-tabs";
 import { Logo } from "@/components/images/logo";
 import Navigation from "@/components/navigation";
-import AdSenseBanner from "@/components/adSenseBanner";
+import Al5smBanner from "@/components/al5smBanner";
 
 export default function Home() {
   return (
@@ -49,11 +49,9 @@ export default function Home() {
           </section>
         </main>
 
-        {/* Google AdSense Banner - Posicionado melhor no layout */}
-        <section className="w-full bg-gray-50 py-8 flex flex-col lg:flex-row justify-between gap-4">
-          <div className="container w-full flex items-center justify-center px-4">
-            <AdSenseBanner className="w-full" />
-          </div>
+        {/* Banner externo (substitui o AdSense) - tamanho contido */}
+        <section className="py-6 flex justify-center">
+          <Al5smBanner style={{ width: 300, minHeight: 250 }} />
         </section>
 
         {/* Seção de conteúdo adicional para SEO */}

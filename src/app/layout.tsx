@@ -50,12 +50,6 @@ export default function RootLayout({
           crossOrigin="anonymous"
           strategy="afterInteractive"
         />
-        <script
-          src="https://fpyf8.com/88/tag.min.js"
-          data-zone="184170"
-          async
-          data-cfasync="false"
-        ></script>
       </head>
       <body className={`${dm_sans.variable} antialiased`}>{children}</body>
     </html>
