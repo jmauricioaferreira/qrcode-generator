@@ -1,7 +1,7 @@
 import QRGeneratorPage from "@/components/qr-tabs";
 import { Logo } from "@/components/images/logo";
 import Navigation from "@/components/navigation";
-import Al5smBanner from "@/components/al5smBanner";
+import ActBanner from "@/components/actBanner";
 
 export default function Home() {
   return (
@@ -49,9 +49,9 @@ export default function Home() {
           </section>
         </main>
 
-        {/* Banner externo (substitui o AdSense) - tamanho contido */}
+        {/* Banner ACT (substitui o anterior) - tamanho contido */}
         <section className="py-6 flex justify-center">
-          <Al5smBanner style={{ width: 300, minHeight: 250 }} />
+          <ActBanner style={{ width: 300, minHeight: 250 }} />
         </section>
 
         {/* Seção de conteúdo adicional para SEO */}
