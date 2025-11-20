@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Aprenda como usar o QR Creator passo a passo. Tutorial completo para criar QR Codes personalizados de forma fácil e rápida.",
   keywords:
-    "como usar qr creator, tutorial qr code, guia qr code, instruções qr creator",
+    "como usar qr creator, tutorial qr code, guia qr code, instruções qr creator, qr code url, qr code whatsapp, qr code wifi, qr code texto, qr code vcard, qr code instagram, qr code youtube, qr code pix, qr code localização, cor de fundo do qr, personalizar qr code",
 };
 
 export default function ComoUsar() {
@@ -33,48 +33,46 @@ export default function ComoUsar() {
               </section>
 
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold text-primary mb-4">
-                  1. Escolha o Tipo de QR Code
-                </h2>
+                <h2 className="text-2xl font-semibold text-primary mb-4">1. Escolha o Tipo de QR Code</h2>
                 <div className="bg-white p-6 rounded-lg shadow-sm mb-6">
-                  <p className="text-textSecondary mb-4">
-                    Na página principal, você encontrará 4 abas diferentes para
-                    escolher o tipo de conteúdo:
-                  </p>
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div className="border border-gray-200 p-4 rounded-lg">
-                      <h3 className="font-semibold text-primary mb-2">
-                        🌐 URL
-                      </h3>
-                      <p className="text-sm text-textSecondary">
-                        Para links de sites, páginas web, vídeos do YouTube,
-                        etc.
-                      </p>
-                    </div>
-                    <div className="border border-gray-200 p-4 rounded-lg">
-                      <h3 className="font-semibold text-primary mb-2">
-                        📱 WhatsApp
-                      </h3>
-                      <p className="text-sm text-textSecondary">
-                        Para contato direto via WhatsApp com número de telefone.
-                      </p>
-                    </div>
-                    <div className="border border-gray-200 p-4 rounded-lg">
-                      <h3 className="font-semibold text-primary mb-2">
-                        📝 Texto
-                      </h3>
-                      <p className="text-sm text-textSecondary">
-                        Para qualquer texto livre, mensagens, informações, etc.
-                      </p>
-                    </div>
-                    <div className="border border-gray-200 p-4 rounded-lg">
-                      <h3 className="font-semibold text-primary mb-2">
-                        📶 Wi-Fi
-                      </h3>
-                      <p className="text-sm text-textSecondary">
-                        Para compartilhar senha de rede Wi-Fi automaticamente.
-                      </p>
-                    </div>
+                  <p className="text-textSecondary mb-4">Você pode criar QR Codes para diferentes finalidades. Acesse diretamente cada tipo:</p>
+                  <div className="grid md:grid-cols-3 gap-4">
+                    <Link href="/qr-code-url" className="border border-gray-200 p-4 rounded-lg">
+                      <h3 className="font-semibold text-primary mb-2">🌐 URL</h3>
+                      <p className="text-sm text-textSecondary">Links para sites, páginas e recursos na web.</p>
+                    </Link>
+                    <Link href="/qr-code-whatsapp" className="border border-gray-200 p-4 rounded-lg">
+                      <h3 className="font-semibold text-primary mb-2">📱 WhatsApp</h3>
+                      <p className="text-sm text-textSecondary">Inicie conversas com número pré-preenchido.</p>
+                    </Link>
+                    <Link href="/qr-code-texto" className="border border-gray-200 p-4 rounded-lg">
+                      <h3 className="font-semibold text-primary mb-2">📝 Texto</h3>
+                      <p className="text-sm text-textSecondary">Mensagens e informações exibidas ao escanear.</p>
+                    </Link>
+                    <Link href="/qr-code-wifi" className="border border-gray-200 p-4 rounded-lg">
+                      <h3 className="font-semibold text-primary mb-2">📶 Wi‑Fi</h3>
+                      <p className="text-sm text-textSecondary">Compartilhe acesso à rede automaticamente.</p>
+                    </Link>
+                    <Link href="/qr-code-vcard" className="border border-gray-200 p-4 rounded-lg">
+                      <h3 className="font-semibold text-primary mb-2">👤 VCard</h3>
+                      <p className="text-sm text-textSecondary">Contato em formato de cartão virtual.</p>
+                    </Link>
+                    <Link href="/qr-code-instagram" className="border border-gray-200 p-4 rounded-lg">
+                      <h3 className="font-semibold text-primary mb-2">📷 Instagram</h3>
+                      <p className="text-sm text-textSecondary">Abra perfis ou links de conteúdo.</p>
+                    </Link>
+                    <Link href="/qr-code-youtube" className="border border-gray-200 p-4 rounded-lg">
+                      <h3 className="font-semibold text-primary mb-2">▶️ YouTube</h3>
+                      <p className="text-sm text-textSecondary">Direcione para vídeos ou canais.</p>
+                    </Link>
+                    <Link href="/qr-code-pix" className="border border-gray-200 p-4 rounded-lg">
+                      <h3 className="font-semibold text-primary mb-2">💸 PIX</h3>
+                      <p className="text-sm text-textSecondary">Chave ou payload de pagamento.</p>
+                    </Link>
+                    <Link href="/qr-code-localizacao" className="border border-gray-200 p-4 rounded-lg">
+                      <h3 className="font-semibold text-primary mb-2">📍 Localização</h3>
+                      <p className="text-sm text-textSecondary">Geo coordenadas Lat,Lng.</p>
+                    </Link>
                   </div>
                 </div>
               </section>
@@ -140,24 +138,28 @@ export default function ComoUsar() {
                     </div>
                   </div>
 
-                  <h3 className="text-lg font-semibold text-primary mb-3">
-                    Cores
-                  </h3>
-                  <p className="text-textSecondary mb-4">
-                    Personalize a cor do QR Code:
-                  </p>
-                  <div className="grid md:grid-cols-3 gap-4">
+                  <h3 className="text-lg font-semibold text-primary mb-3">Cores</h3>
+                  <p className="text-textSecondary mb-4">Personalize duas cores: <strong>Cor do QR</strong> e <strong>Cor de Fundo</strong>. Use as paletas sugeridas ou selecione uma cor personalizada.</p>
+                  <div className="grid md:grid-cols-2 gap-4">
                     <div className="text-center p-4 border border-gray-200 rounded-lg">
-                      <div className="w-8 h-8 bg-[#1d1c52] mx-auto mb-2 rounded"></div>
-                      <p className="text-sm font-semibold">Primária</p>
+                      <h4 className="font-semibold text-primary mb-2">Cor do QR</h4>
+                      <div className="flex justify-center gap-2 mb-2">
+                        <span className="w-6 h-6 rounded bg-[#000000]"></span>
+                        <span className="w-6 h-6 rounded bg-[#1d1c52]"></span>
+                        <span className="w-6 h-6 rounded bg-[#3b82f6]"></span>
+                        <span className="w-6 h-6 rounded bg-[#28f064]"></span>
+                      </div>
+                      <p className="text-xs text-textSecondary">Evite baixo contraste com o fundo.</p>
                     </div>
                     <div className="text-center p-4 border border-gray-200 rounded-lg">
-                      <div className="w-8 h-8 bg-[#28f064] mx-auto mb-2 rounded"></div>
-                      <p className="text-sm font-semibold">Acento</p>
-                    </div>
-                    <div className="text-center p-4 border border-gray-200 rounded-lg">
-                      <div className="w-8 h-8 bg-[#3b82f6] mx-auto mb-2 rounded"></div>
-                      <p className="text-sm font-semibold">Texto</p>
+                      <h4 className="font-semibold text-primary mb-2">Cor de Fundo</h4>
+                      <div className="flex justify-center gap-2 mb-2">
+                        <span className="w-6 h-6 rounded bg-[#ffffff] border"></span>
+                        <span className="w-6 h-6 rounded bg-[#f8fafc]"></span>
+                        <span className="w-6 h-6 rounded bg-[#f1f5f9]"></span>
+                        <span className="w-6 h-6 rounded bg-[#e5e7eb]"></span>
+                      </div>
+                      <p className="text-xs text-textSecondary">Fundo claro melhora a leitura.</p>
                     </div>
                   </div>
                 </div>
@@ -194,7 +196,7 @@ export default function ComoUsar() {
                     <ul className="list-disc list-inside text-textSecondary space-y-2">
                       <li>Teste sempre o QR Code antes de imprimir</li>
                       <li>Use URLs curtas para melhor legibilidade</li>
-                      <li>Mantenha o contraste entre cor e fundo</li>
+                      <li>Mantenha alto contraste entre cor e fundo</li>
                       <li>
                         Evite códigos muito complexos em tamanhos pequenos
                       </li>
@@ -208,9 +210,24 @@ export default function ComoUsar() {
                       <li>Verifique se o link está funcionando</li>
                       <li>Teste em diferentes dispositivos</li>
                       <li>Mantenha backup dos QR Codes importantes</li>
-                      <li>Use senhas seguras para Wi-Fi</li>
+                      <li>Use senhas seguras para Wi‑Fi</li>
                     </ul>
                   </div>
+                </div>
+              </section>
+
+              <section className="mb-12">
+                <h2 className="text-2xl font-semibold text-primary mb-4">Links Rápidos</h2>
+                <div className="grid md:grid-cols-3 gap-4">
+                  <Link href="/qr-code-url" className="border border-gray-200 p-4 rounded-lg">QR Code para URL</Link>
+                  <Link href="/qr-code-whatsapp" className="border border-gray-200 p-4 rounded-lg">QR Code para WhatsApp</Link>
+                  <Link href="/qr-code-texto" className="border border-gray-200 p-4 rounded-lg">QR Code para Texto</Link>
+                  <Link href="/qr-code-wifi" className="border border-gray-200 p-4 rounded-lg">QR Code para Wi‑Fi</Link>
+                  <Link href="/qr-code-vcard" className="border border-gray-200 p-4 rounded-lg">QR Code para VCard</Link>
+                  <Link href="/qr-code-instagram" className="border border-gray-200 p-4 rounded-lg">QR Code para Instagram</Link>
+                  <Link href="/qr-code-youtube" className="border border-gray-200 p-4 rounded-lg">QR Code para YouTube</Link>
+                  <Link href="/qr-code-pix" className="border border-gray-200 p-4 rounded-lg">QR Code para PIX</Link>
+                  <Link href="/qr-code-localizacao" className="border border-gray-200 p-4 rounded-lg">QR Code para Localização</Link>
                 </div>
               </section>
 

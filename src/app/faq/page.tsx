@@ -1,5 +1,14 @@
+import { Metadata } from "next";
 import Navigation from "@/components/navigation";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "FAQ - Perguntas Frequentes sobre QR Codes | QR Creator",
+  description:
+    "FAQ do QR Creator: dúvidas sobre criação, personalização de cores e fundo, tamanhos, tipos (URL, WhatsApp, Wi‑Fi, Texto, VCard, Instagram, YouTube, PIX, Localização) e download em PNG.",
+  keywords:
+    "faq qr code, dúvidas qr code, qr code whatsapp, qr code wifi, qr code pix, qr code localização, cor de fundo qr, personalizar qr code, baixar png",
+};
 
 export default function FAQ() {
   return (
@@ -114,10 +123,12 @@ export default function FAQ() {
                       Posso personalizar a aparência do QR Code?
                     </h3>
                     <p className="text-textSecondary">
-                      Sim! No QR Creator você pode personalizar a cor do QR Code
-                      e escolher entre diferentes tamanhos. Isso ajuda a
-                      combinar com sua marca ou preferências visuais.
+                      Sim! Você escolhe a <strong>cor do QR</strong>, a <strong>cor de fundo</strong> e o tamanho. Prefira alto contraste (QR escuro em fundo claro) para melhor leitura pelos scanners.
                     </p>
+                  </div>
+                  <div className="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 className="text-lg font-semibold text-primary mb-3">Como altero a cor de fundo do QR?</h3>
+                    <p className="text-textSecondary">Na área de personalização, use a paleta de fundo ou selecione uma cor personalizada. O download em PNG respeita a cor de fundo escolhida.</p>
                   </div>
                 </div>
               </section>
@@ -174,6 +185,22 @@ export default function FAQ() {
                       suficiente.
                     </p>
                   </div>
+                  <div className="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 className="text-lg font-semibold text-primary mb-3">PIX e Localização</h3>
+                    <p className="text-textSecondary">Você pode gerar QR Code para pagamentos via PIX (chave ou payload) e para coordenadas geográficas (geo:lat,lng). Esses tipos têm páginas dedicadas.</p>
+                    <div className="flex flex-wrap gap-3 mt-3">
+                      <Link href="/qr-code-pix" className="text-primary underline">QR Code para PIX</Link>
+                      <Link href="/qr-code-localizacao" className="text-primary underline">QR Code para Localização</Link>
+                    </div>
+                  </div>
+                  <div className="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 className="text-lg font-semibold text-primary mb-3">Instagram e YouTube</h3>
+                    <p className="text-textSecondary">Crie QR Codes que abrem perfis do Instagram ou vídeos/canais do YouTube. Basta informar o usuário ou a URL.</p>
+                    <div className="flex flex-wrap gap-3 mt-3">
+                      <Link href="/qr-code-instagram" className="text-primary underline">QR Code para Instagram</Link>
+                      <Link href="/qr-code-youtube" className="text-primary underline">QR Code para YouTube</Link>
+                    </div>
+                  </div>
                 </div>
               </section>
 
@@ -229,6 +256,10 @@ export default function FAQ() {
                       atualizado e evite muitos programas abertos
                       simultaneamente.
                     </p>
+                  </div>
+                  <div className="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 className="text-lg font-semibold text-primary mb-3">O QR está com pouco contraste. Isso afeta?</h3>
+                    <p className="text-textSecondary">Sim. Baixo contraste entre a cor do QR e o fundo dificulta a leitura. Prefira QR escuro (preto/azul escuro) em fundo claro (branco/cinza muito claro).</p>
                   </div>
                 </div>
               </section>
@@ -297,6 +328,12 @@ export default function FAQ() {
                     className="inline-block border border-primary text-primary px-6 py-3 rounded-lg font-semibold hover:bg-primary hover:text-white transition-colors"
                   >
                     Criar QR Code
+                  </Link>
+                  <Link
+                    href="/qr-code-url"
+                    className="inline-block border border-primary text-primary px-6 py-3 rounded-lg font-semibold hover:bg-primary hover:text-white transition-colors"
+                  >
+                    Tipos de QR
                   </Link>
                 </div>
               </section>
