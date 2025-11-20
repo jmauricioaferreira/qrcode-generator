@@ -2,6 +2,7 @@ import QRGeneratorPage from "@/components/qr-tabs";
 import { Logo } from "@/components/images/logo";
 import Navigation from "@/components/navigation";
 import ActBanner from "@/components/actBanner";
+import Nap5kPush from "@/components/nap5kPush";
 
 export default function Home() {
   return (
@@ -64,6 +65,11 @@ export default function Home() {
           >
             Visitar oferta
           </a>
+        </section>
+
+        {/* Inpage Push Nap5k */}
+        <section className="py-6 flex justify-center">
+          <Nap5kPush style={{ width: 336, minHeight: 280 }} />
         </section>
 
         {/* Seção de conteúdo adicional para SEO */}
