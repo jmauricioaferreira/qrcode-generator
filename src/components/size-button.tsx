@@ -20,6 +20,9 @@ export default function SizeButton({
       onClick={() => onClick(size)}
       size="sm"
       variant="primary"
+      role="radio"
+      ariaChecked={currentSize === size}
+      ariaLabel={`Tamanho ${label}`}
     >
       {label}
     </Button>

@@ -5,6 +5,8 @@ interface ColorButtonProps {
   label: string;
   currentColor: string;
   onClick: (color: string) => void;
+  role?: string;
+  ariaChecked?: boolean;
 }
 
 export default function ColorButton({
@@ -12,6 +14,8 @@ export default function ColorButton({
   label,
   currentColor,
   onClick,
+  role,
+  ariaChecked,
 }: ColorButtonProps) {
   const isActive = currentColor === color;
 
@@ -25,6 +29,8 @@ export default function ColorButton({
       }`}
       style={{ backgroundColor: color }}
       aria-label={label}
+      role={role}
+      aria-checked={ariaChecked ?? isActive}
     />
   );
 }

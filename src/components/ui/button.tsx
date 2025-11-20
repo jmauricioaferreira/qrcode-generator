@@ -5,11 +5,14 @@ interface ButtonProps {
   onClick?: () => void;
   isActive?: boolean;
   variant?: "primary" | "accent" | "secondary";
-  size?: "sm" | "md" | "lg";
+  size?: "sm" | "md" | "lg" | "full";
   className?: string;
   disabled?: boolean;
   type?: "button" | "submit" | "reset";
   title?: string;
+  role?: string;
+  ariaChecked?: boolean;
+  ariaLabel?: string;
 }
 
 export default function Button({
@@ -22,6 +25,9 @@ export default function Button({
   disabled = false,
   type = "button",
   title,
+  role,
+  ariaChecked,
+  ariaLabel,
 }: ButtonProps) {
   const baseClasses =
     "font-medium rounded transition-all duration-200 cursor-pointer border-2";
@@ -42,6 +48,7 @@ export default function Button({
     sm: "px-3 py-1 text-sm",
     md: "px-4 py-2 text-base",
     lg: "px-6 py-3 text-lg",
+    full: "w-full",
   };
 
   const disabledClasses = disabled
@@ -63,6 +70,9 @@ export default function Button({
       disabled={disabled}
       className={combinedClasses}
       title={title}
+      role={role}
+      aria-checked={ariaChecked}
+      aria-label={ariaLabel}
     >
       {children}
     </button>
