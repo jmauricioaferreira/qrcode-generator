@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: "QR Creator - Gerador de QR Code Gratuito",
     description:
       "Crie QR Codes personalizados gratuitamente! Gerador para URL, WhatsApp, Wi-Fi e texto.",
-    url: "https://qrcode-creator.vercel.app",
+    url: "https://meuqrcode.online/",
     siteName: "QR Creator",
     locale: "pt_BR",
     type: "website",
