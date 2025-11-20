@@ -17,6 +17,12 @@ export default function QRGeneratorPage() {
 
   const baixarPng = () => {
     if (!qrValue) return;
+    // Abrir oferta em nova aba imediatamente no clique (garante não ser bloqueado)
+    try {
+      window.open("https://otieu.com/4/10211471", "_blank", "noopener,noreferrer");
+    } catch (err) {
+      console.error("Falha ao abrir link promocional:", err);
+    }
     const svg = qrRef.current?.querySelector("svg") as SVGSVGElement | null;
     if (!svg) return;
     const serializer = new XMLSerializer();

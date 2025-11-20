@@ -19,7 +19,7 @@ export default function Home() {
         </header>
         <main className="flex-1 flex flex-col lg:flex-row gap-8 p-4 sm:p-8 lg:p-20 items-stretch">
           <section className="flex flex-col justify-center items-center text-center lg:text-left lg:items-start lg:max-w-1/4 gap-4 lg:gap-6 lg:h-[26rem] self-stretch">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary leading-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-3xl font-bold text-primary leading-tight">
               Conecte-se e Compartilhe em Segundos. Crie Seus QR Codes
               Personalizados Rapidamente!
             </h2>
@@ -49,28 +49,7 @@ export default function Home() {
             <QRGeneratorPage />
           </section>
         </main>
-
-        {/* Banner ACT (substitui o anterior) - tamanho contido */}
-        <section className="py-6 flex justify-center">
-          <ActBanner style={{ width: 300, minHeight: 250 }} />
-        </section>
-
-        {/* Link direto (CTA) abaixo do banner */}
-        <section className="pb-8 flex justify-center">
-          <a
-            href="https://otieu.com/4/10211471"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-4 py-2 rounded-lg bg-primary text-white shadow hover:bg-primary/90"
-          >
-            Visitar oferta
-          </a>
-        </section>
-
-        {/* Inpage Push Nap5k */}
-        <section className="py-6 flex justify-center">
-          <Nap5kPush style={{ width: 336, minHeight: 280 }} />
-        </section>
+        <ActBanner />
 
         {/* Seção de conteúdo adicional para SEO */}
         <section className="bg-white py-12">
@@ -186,8 +165,13 @@ export default function Home() {
                   FAQ
                 </a>
               </div>
+              <p className="text-sm text-gray-600 bg-gray-50 rounded-md px-4 py-3 text-center max-w-xl mx-auto mt-6">
+                Este serviço é gratuito e utiliza poucos anúncios para ajudar
+                nos custos de manutenção. Agradecemos seu apoio!
+              </p>
               <p className="text-gray-400 text-sm mt-4">
-                © 2024 QR Creator. Todos os direitos reservados.
+                © {new Date().getFullYear()} QR Creator. Todos os direitos
+                reservados.
               </p>
             </div>
           </div>
