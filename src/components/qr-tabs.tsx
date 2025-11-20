@@ -1,6 +1,7 @@
 "use client";
 
 import * as Tabs from "@radix-ui/react-tabs";
+import * as Tooltip from "@radix-ui/react-tooltip";
 import { useRef, useState } from "react";
 import QRCode from "react-qr-code";
 import Button from "./ui/button";
@@ -240,14 +241,37 @@ export default function QRGeneratorPage() {
             </div>
           )}
           <div className="flex justify-end w-full h-fit">
-            <Button
-              onClick={baixarPng}
-              variant="accent"
-              size="md"
-              className="mt-4 shadow-lg h-12"
-            >
-              Baixar PNG
-            </Button>
+            <Tooltip.Provider delayDuration={250}>
+              <Tooltip.Root>
+                <Tooltip.Trigger asChild>
+                  <span
+                    tabIndex={0}
+                    className="inline-block"
+                  >
+                    <Button
+                      onClick={baixarPng}
+                      variant="accent"
+                      size="md"
+                      className="mt-4 shadow-lg h-12"
+                      disabled={!qrValue}
+                    >
+                      Baixar PNG
+                    </Button>
+                  </span>
+                </Tooltip.Trigger>
+                {!
+                  qrValue && (
+                    <Tooltip.Content
+                      side="top"
+                      sideOffset={8}
+                      className="rounded bg-gray-900 text-white px-2 py-1 text-sm shadow"
+                    >
+                      Para baixar o PNG, gere o QR Code antes.
+                    </Tooltip.Content>
+                  )
+                }
+              </Tooltip.Root>
+            </Tooltip.Provider>
           </div>
         </div>
       </div>

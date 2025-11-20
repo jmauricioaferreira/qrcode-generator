@@ -1,7 +1,6 @@
 import QRGeneratorPage from "@/components/qr-tabs";
 import { Logo } from "@/components/images/logo";
 import Navigation from "@/components/navigation";
-import ActBanner from "@/components/actBanner";
 import Nap5kPush from "@/components/nap5kPush";
 
 export default function Home() {
@@ -19,7 +18,7 @@ export default function Home() {
         </header>
         <main className="flex-1 flex flex-col lg:flex-row gap-8 p-4 sm:p-8 lg:p-20 items-stretch">
           <section className="flex flex-col justify-center items-center text-center lg:text-left lg:items-start lg:max-w-1/4 gap-4 lg:gap-6 lg:h-[26rem] self-stretch">
-            <h2 className="text-2xl sm:text-3xl lg:text-3xl font-bold text-primary leading-tight">
+            <h2 className="text-2xl sm:text-2xl lg:text-2xl font-bold text-primary leading-tight">
               Conecte-se e Compartilhe em Segundos. Crie Seus QR Codes
               Personalizados Rapidamente!
             </h2>

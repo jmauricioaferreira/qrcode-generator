@@ -9,6 +9,7 @@ interface ButtonProps {
   className?: string;
   disabled?: boolean;
   type?: "button" | "submit" | "reset";
+  title?: string;
 }
 
 export default function Button({
@@ -20,6 +21,7 @@ export default function Button({
   className = "",
   disabled = false,
   type = "button",
+  title,
 }: ButtonProps) {
   const baseClasses =
     "font-medium rounded transition-all duration-200 cursor-pointer border-2";
@@ -60,6 +62,7 @@ export default function Button({
       onClick={onClick}
       disabled={disabled}
       className={combinedClasses}
+      title={title}
     >
       {children}
     </button>
