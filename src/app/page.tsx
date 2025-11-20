@@ -49,7 +49,7 @@ export default function Home() {
             <QRGeneratorPage />
           </section>
         </main>
-        <ActBanner />
+        <Nap5kPush style={{ width: 300, minHeight: 250 }} />
 
         {/* Seção de conteúdo adicional para SEO */}
         <section className="bg-white py-12">

@@ -52,5 +52,22 @@ export default function ActBanner({
     };
   }, [zone]);
 
-  return <div ref={containerRef}></div>;
+  return (
+    <div ref={containerRef} className={className} style={style}>
+      {!loaded && (
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            height: "100%",
+            color: "#666",
+            fontSize: "14px",
+          }}
+        >
+          Carregando anúncio...
+        </div>
+      )}
+    </div>
+  );
 }
