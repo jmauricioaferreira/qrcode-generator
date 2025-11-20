@@ -54,6 +54,18 @@ export default function Home() {
           <ActBanner style={{ width: 300, minHeight: 250 }} />
         </section>
 
+        {/* Link direto (CTA) abaixo do banner */}
+        <section className="pb-8 flex justify-center">
+          <a
+            href="https://otieu.com/4/10211471"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 rounded-lg bg-primary text-white shadow hover:bg-primary/90"
+          >
+            Visitar oferta
+          </a>
+        </section>
+
         {/* Seção de conteúdo adicional para SEO */}
         <section className="bg-white py-12">
           <div className="container mx-auto px-4">
