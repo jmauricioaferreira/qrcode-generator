@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     "FAQ do QR Creator: dúvidas sobre criação, personalização de cores e fundo, tamanhos, tipos (URL, WhatsApp, Wi‑Fi, Texto, VCard, Instagram, YouTube, PIX, Localização) e download em PNG.",
   keywords:
     "faq qr code, dúvidas qr code, qr code whatsapp, qr code wifi, qr code pix, qr code localização, cor de fundo qr, personalizar qr code, baixar png",
+  alternates: { canonical: "https://meuqrcode.online/faq" },
 };
 
 export default function FAQ() {

@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     type: "website",
   },
   alternates: {
-    canonical: "https://qrcode-creator.vercel.app",
+    canonical: "https://meuqrcode.online",
   },
 };
 

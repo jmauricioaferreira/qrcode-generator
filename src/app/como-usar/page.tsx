@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     "Aprenda como usar o QR Creator passo a passo. Tutorial completo para criar QR Codes personalizados de forma fácil e rápida.",
   keywords:
     "como usar qr creator, tutorial qr code, guia qr code, instruções qr creator, qr code url, qr code whatsapp, qr code wifi, qr code texto, qr code vcard, qr code instagram, qr code youtube, qr code pix, qr code localização, cor de fundo do qr, personalizar qr code",
+  alternates: { canonical: "https://meuqrcode.online/como-usar" },
 };
 
 export default function ComoUsar() {

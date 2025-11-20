@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     "Conheça o QR Creator, a ferramenta mais completa para criar QR Codes personalizados. Saiba mais sobre nossa missão e recursos.",
   keywords:
     "sobre qr creator, gerador qr code, ferramenta qr code, missão qr creator",
+  alternates: { canonical: "https://meuqrcode.online/sobre" },
 };
 
 export default function Sobre() {
